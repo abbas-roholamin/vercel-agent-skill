@@ -4,6 +4,8 @@ import starlight from "@astrojs/starlight";
 
 import tailwindcss from "@tailwindcss/vite";
 
+import vercel from "@astrojs/vercel";
+
 // https://astro.build/config
 export default defineConfig({
   integrations: [
@@ -33,4 +35,6 @@ export default defineConfig({
   vite: {
     plugins: [tailwindcss()],
   },
+
+  adapter: vercel(),
 });
